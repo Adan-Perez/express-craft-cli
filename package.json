@@ -1,0 +1,53 @@
+{
+  "name": "express-craft",
+  "version": "0.1.0",
+  "description": "A CLI tool to scaffold Express.js applications",
+  "type": "module",
+  "main": "bin/express-craft.js",
+  "bin": {
+    "express-craft": "./bin/express-craft.js"
+  },
+  "scripts": {
+    "start": "node bin/express-craft.js",
+    "test": "node test/test-simple.js",
+    "test:full": "node test/test-cli.js",
+    "dev": "node bin/express-craft.js"
+  },
+  "keywords": [
+    "cli",
+    "express",
+    "scaffold",
+    "nodejs",
+    "generator",
+    "boilerplate",
+    "template",
+    "javascript",
+    "es-modules"
+  ],
+  "author": {
+    "name": "Adan-Perez",
+    "url": "https://github.com/Adan-Perez"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^9.2.0",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adan-Perez/express-craft-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adan-Perez/express-craft-cli/issues"
+  },
+  "homepage": "https://github.com/Adan-Perez/express-craft-cli#readme"
+}
