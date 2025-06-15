@@ -1,11 +1,18 @@
 # Development and internal files
 TODO.md
 
+# TypeScript source files (we publish compiled JS)
+src/
+tsconfig.json
+
 # Test files
 test/
 
 # Development configuration
 .nvmrc
+
+# Original JavaScript files (now we use TypeScript)
+legacy/
 
 # Git files
 .git/

@@ -32,8 +32,8 @@ function test(name, fn) {
 function runCLI(args) {
   const isWindows = process.platform === 'win32'
   const cmd = isWindows
-    ? `node bin/express-craft.js ${args}`
-    : `node bin/express-craft.js ${args}`
+    ? `node dist/cli.js ${args}`
+    : `node dist/cli.js ${args}`
 
   return execSync(cmd, {
     encoding: 'utf8',

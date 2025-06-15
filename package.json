@@ -1,17 +1,19 @@
 {
   "name": "@adandev/express-craft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A CLI tool to scaffold Express.js applications",
   "type": "module",
-  "main": "bin/express-craft.js",
+  "main": "dist/cli.js",
   "bin": {
-    "express-craft": "bin/express-craft.js"
+    "express-craft": "./dist/cli.js"
   },
   "scripts": {
-    "start": "node bin/express-craft.js",
-    "test": "node test/test-simple.js",
-    "test:full": "node test/test-cli.js",
-    "dev": "node bin/express-craft.js"
+    "build": "tsc",
+    "dev": "node --import tsx src/cli.ts",
+    "start": "npm run build && node dist/cli.js",
+    "test": "npm run build && node test/test-simple.js",
+    "test:full": "npm run build && node test/test-cli.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "cli",
@@ -37,7 +39,13 @@
     "ora": "^8.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.8",
+    "@types/node": "^24.0.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=22.0.0"
